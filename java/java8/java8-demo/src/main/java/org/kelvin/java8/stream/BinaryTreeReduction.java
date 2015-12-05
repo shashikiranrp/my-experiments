@@ -5,7 +5,7 @@ package org.kelvin.java8.stream;
  */
 public class BinaryTreeReduction
 {
-    static class Node<T>
+    public static class Node<T>
     {
         T data;
         Node<T> leftTree;

@@ -6,7 +6,7 @@ package org.kelvin.java8;
 public class LambdaFunction
 {
 
-    interface Operation<T>
+    public interface Operation<T>
     {
         T apply(T op1, T op2);
     }
@@ -30,7 +30,7 @@ public class LambdaFunction
     }
 
     // lambda as arg
-    static <T> T doOperation(final Operation<T> operation, final T op1, final T op2)
+    public static <T> T doOperation(final Operation<T> operation, final T op1, final T op2)
     {
         return operation.apply(op1, op2);
     }
@@ -42,7 +42,7 @@ public class LambdaFunction
     }
 
     // static method reference as lambda
-    static int multiply(final int op1, final int op2)
+    public static int multiply(final int op1, final int op2)
     {
         return op1 * op2;
     }
