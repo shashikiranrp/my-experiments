@@ -42,13 +42,13 @@ public class LambdaFunction
     }
 
     // static method reference as lambda
-    static int multiply(int op1, int op2)
+    static int multiply(final int op1, final int op2)
     {
         return op1 * op2;
     }
 
     // object message as lambda
-    int mod(int op1, int op2)
+    int mod(final int op1, final int op2)
     {
         return op1 % op2;
     }
