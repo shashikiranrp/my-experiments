@@ -36,13 +36,13 @@ public class BasicStreamExamples
         //Map and Collectors examples
         System.out.println("SUM of first 10 natural numbers: " +
                 Util.naturalNumbers().limit(10).reduce(0, (acc, next) -> acc + next));
-        System.out.println("product of squares of first 10 natural numbers: " +
+        System.out.println("product of squares of first 5 natural numbers: " +
                 Util.naturalNumbers().limit(5).
                         map(((Integer nat) -> LambdaFunction.<Integer>doOperation(LambdaFunction::multiply, nat, nat))).
                         reduce(1, LambdaFunction::multiply));
 
         System.out.println(" EVEN NAT < 100: " +
-                Util.naturalNumbers().limit(100).filter((nat) -> 0 == nat % 2).collect(Collectors.toList()));
+                Util.naturalNumbers().limit(100).filter((nat) -> 0 == (nat % 2)).collect(Collectors.toList()));
 
         System.out.println("UNIQUE NAT in random ints: " +
                 Util.infiniteRandomPositiveIntegers(100).limit(101).collect(Collectors.toSet()));
